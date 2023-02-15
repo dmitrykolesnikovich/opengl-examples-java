@@ -3,13 +3,12 @@ package jopengl.utils
 import com.jogamp.opengl.GL
 import com.jogamp.opengl.GL4
 import de.matthiasmann.twl.utils.PNGDecoder
-import utils.BufferUtils
-import utils.BufferUtils.createIntBuffer
+import jopengl.utils.BufferUtils.createIntBuffer
 import java.io.InputStream
 import java.nio.ByteBuffer
 import java.nio.IntBuffer
 
-fun GL4.loadImage(filePath: String): Int {
+fun GL4.loadTexture(filePath: String): Int {
     val intBuffer: IntBuffer = createIntBuffer(1)
     glGenTextures(1, intBuffer)
     val textureId: Int = intBuffer[0]

@@ -1,5 +1,5 @@
 artifact "jopengl:examples-desktop"
-mainCall "jopengl.stencil()"
+mainCall "jopengl.stencil2()"
 
 source {
     include "org.jogamp.jogl:jogl-all:$jogamp_version"

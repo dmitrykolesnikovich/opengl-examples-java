@@ -1,4 +1,4 @@
-package utils
+package  jopengl.utils
 
 import com.jogamp.opengl.GL.GL_ARRAY_BUFFER
 import com.jogamp.opengl.GL.GL_STATIC_DRAW
@@ -40,15 +40,4 @@ object BufferUtils {
         return byteBuffer
     }
 
-}
-
-fun GL4.generateBuffer(): Int {
-    val intBuffer: IntBuffer = BufferUtils.createIntBuffer(1)
-    glGenBuffers(1, intBuffer)
-    return intBuffer[0]
-}
-
-fun GL4.loadBuffer(buffer: FloatBuffer) {
-    val size: Int = buffer.capacity() * Float.SIZE_BYTES
-    glBufferData(GL_ARRAY_BUFFER, size.toLong(), buffer, GL_STATIC_DRAW)
 }

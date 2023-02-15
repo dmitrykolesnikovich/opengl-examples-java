@@ -4,7 +4,7 @@ import com.jogamp.opengl.GL.*
 import com.jogamp.opengl.GL4
 import jopengl.utils.Application
 import jopengl.utils.createShaderProgram
-import jopengl.utils.loadImage
+import jopengl.utils.loadTexture
 import jopengl.utils.runApplication
 import utils.BufferUtils.createFloatBuffer
 import utils.generateBuffer
@@ -33,8 +33,8 @@ fun stencil() = runApplication(object : Application {
         gl.glEnable(GL_BLEND)
         gl.glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
 
-        programId = gl.createShaderProgram("shaders/stencil.vertex.shader", "shaders/stencil.fragment.shader")
-        textureId = gl.loadImage("images/awesomeface.png")
+        programId = gl.createShaderProgram("shaders/stencil")
+        textureId = gl.loadTexture("images/awesomeface.png")
 
         bufferId1 = gl.generateBuffer()
         buffer1.put(

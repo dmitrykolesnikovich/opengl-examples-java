@@ -2,7 +2,9 @@ package jopengl.utils
 
 import com.jogamp.opengl.GL4
 
-fun GL4.createShaderProgram(vertexShaderFilePath: String, fragmentShaderFilePath: String): Int {
+fun GL4.createShaderProgram(shader: String): Int {
+    val vertexShaderFilePath: String = "$shader.vertex.shader"
+    val fragmentShaderFilePath: String = "$shader.fragment.shader"
     val vShaderSource: String = ClassLoader.getSystemResource(vertexShaderFilePath).readText()
     val fShaderSource: String = ClassLoader.getSystemResource(fragmentShaderFilePath).readText()
     val vShaderObj: Int = glCreateShader(GL4.GL_VERTEX_SHADER)
