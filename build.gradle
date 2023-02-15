@@ -1,0 +1,18 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        maven { url "https://plugins.gradle.org/m2/" }
+        mavenCentral()
+        google()
+        maven { url "https://jitpack.io" }
+    }
+    dependencies {
+        classpath "org.featurea:gradle:$featurea_version"
+    }
+}
+
+apply plugin: "org.featurea"
+
+repositories {
+    maven { url  "https://maven.jzy3d.org/releases" }
+}

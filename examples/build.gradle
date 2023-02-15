@@ -1,0 +1,14 @@
+artifact "jopengl:examples-desktop"
+mainCall "jopengl.stencil()"
+
+source {
+    include "org.jogamp.jogl:jogl-all:$jogamp_version"
+    include "org.jogamp.jogl:jogl-all-natives-macosx-universal:$jogamp_version"
+    include "org.jogamp.jogl:jogl-all-natives-windows-amd64:$jogamp_version"
+    include "org.jogamp.jogl:jogl-all-natives-linux-amd64:$jogamp_version"
+    include "org.jogamp.gluegen:gluegen-rt:$jogamp_version"
+    include "org.jogamp.gluegen:gluegen-rt-natives-macosx-universal:$jogamp_version"
+    include "org.jogamp.gluegen:gluegen-rt-natives-windows-amd64:$jogamp_version"
+    include "org.jogamp.gluegen:gluegen-rt-natives-linux-amd64:$jogamp_version"
+    include "org.l33tlabs.twl:pngdecoder:1.0"
+}
